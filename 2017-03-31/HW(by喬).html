@@ -5,19 +5,21 @@
 <title>Java Script練習</title>
 	<script>	
 	//條件判斷HW
-	var buy;//購買金額
-	buy=2500;
+	var buy = 1500;//購買金額
+	//buy = 2500;
 	if(buy>=3000){
 		alert(buy*0.8-200);
-		} else if(buy>=2000){
-		alert("您的購買金額為"+buy"，您的應付金額為"+buy*0.85-100);
-		}else if(buy>=1000){
-		alert("您的購買金額為"+buy"，您的應付金額為"+buy*0.9);
-		}else{
-		alert("您的購買金額為"+buy"，您的應付金額為"+buy*1);	
-		}
-		
-	
+	}
+	//當字串跟數字合併,數字部分若為很長的算式則應該括號,否則將顯示NaN
+	else if(buy>=2000){
+		alert("您的購買金額為"+buy+"，您的應付金額為"+(buy*0.85-100));
+	}
+	else if(buy>=1000){
+		alert("您的購買金額為"+buy+"，您的應付金額為"+(buy*0.9));
+	}
+	else{
+		alert("您的購買金額為"+buy+"，您的應付金額為"+(buy*1));	
+	}
 	</script>
 </head>
 
