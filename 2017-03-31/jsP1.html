@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jsP1</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <!--購買金額Buy：<input id="buy1"></input>
+        <button id="clk">購買</button>-->
+        <script>
+            var buy = 2000; //購買金額
+            var pay = 0; //應付金額
+            var msg;
+            if(buy >= 3000){
+                pay = buy*0.8 - 200; //打八折並折現兩百
+                msg= "打八折並折現兩百";
+            }else if(buy >= 2000){
+                pay = buy*0.85 - 100; //打八五折並折現一百
+                msg= "打八五折併折現一百";
+            }else if(buy >= 1000){
+                pay = buy*0.9;  //打九折
+                msg = "打九折";
+            }else{ //購買金額小於一千
+                pay = buy; //不打折
+                msg = "不打折";
+            }
+            alert("購買金額:"+buy+"\n應付金額:"+pay+"\n"+msg);
+            //倒斜線n僅限用於alert內，若為網頁則建議你用br
+            //alert("購買金額:"+buy+"，應付金額:"+pay);
+        </script>
+    </body>
+</html>

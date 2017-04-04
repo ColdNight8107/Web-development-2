@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+	 <meta charset="utf-8">
+	 <title>CSS 練習_DIV位置設定</title>
+	 <style>
+     div{
+       background-color: #FFC;
+       width: 200px;
+       height: 200px;
+       border: solid 1px #000;
+     }
+     #div2{
+       position: relative;
+       left: 20px;
+       top: 10px;
+     }
+     #div3{
+       position: absolute;
+       left: 102px;
+       top: 144px;
+     }
+     #div4{
+       position:fixed;
+       left: 30px;
+       top: 30px;
+     }
+     #div5{
+       background-color: #FCF;
+       width: 50px;
+       height: 50px;
+       border: solid 1px #000;
+       position: absolute;
+       left: 50px;
+       top: 50px;
+     }
+	 </style>
+  </head>
+  <body>
+	 <h1><center>CSS 練習_DIV位置設定</center></h1>
+   <div id="div1">區塊1</div>
+   <div id="div2">區塊2
+     <div id="div5">區塊5</div>
+   </div>
+   <div id="div3">區塊3</div>
+   <div id="div4">區塊4</div>
+  </body>
+</html>

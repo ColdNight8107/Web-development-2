@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+	<script>
+		alert("Hello您好！！");//開啟警告視窗,你沒按確定它就會阻隔你不能回來
+		//javascript的每一句話的最後面一定是分號,代表這句話完成
+		//adobe cc寫js會直接執行
+		document.write("12345");
+		document.write("<h1>標題文字-JS輸出</h1>");
+		//document.write("<input id='input1'></input>");
+		var size;
+		size = 10*5;
+		alert(size);
+		console.log("主控台紀錄：計算的結果是："+size);
+		//條件判斷
+		//var sum = document.getElementById('input1').value;  //購買總額
+		var cardMax; //信用卡額度
+		sum = 100+200;
+		cardMax = 500;
+		if(sum>cardMax){
+			alert('您的購買金額超過信譽卡額度了！！！');
+		}else{
+			alert('恭喜，購買成功！！');
+		}
+		// 條件判斷2
+		var cash;//身上的現金
+		cash = 300;
+		if(cash > 25000){
+			alert('您的身價可以買iPhone7');
+		}else if(cash >500){
+			alert("您身上的現金："+ cash +"購買充電線");
+		}else{
+			alert("您身上的現金："+ cash +"不夠買任何東西！！！");
+		}
+
+		// 函數的練習
+		function myFunc1() {
+			alert("我的函數1");
+		}
+		myFunc1();
+
+		function myFunc2(num) { //定義函數
+			alert("我的函數2:收到參數:"+num);
+		}
+		myFunc2(100);//呼叫函數
+
+		function myFunc3(num) {
+			return(num*num); //回傳參數的平方值
+		}
+		theReturn = myFunc3(20);
+		alert("使用我的函數3：得到回應值："+theReturn);
+	</script>
+</head>
+
+<body>
+	<h1><center>Java Script練習</center></h1>
+</body>
+</html>
