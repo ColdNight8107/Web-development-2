@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+	<script>
+		//基本Loop 可數迴圈
+		var i = 0;
+		for(i = 1; i <= 10; i++){
+			console.log(i); //顯示i值
+		}
+		console.log("1-10之間的偶數");
+		for(i=2;i<=10;i+=2){
+			console.log(i); //顯示i值
+		}
+		//顯示奇數(不用i+2處理)
+		console.log("1-10之間的奇數");
+		for(i=1;i<=10;i++){
+			if(i%2!=0){ //若不能被二整除,則為奇數
+				console.log(i); //顯示奇數
+			}
+		}
+		//基本Loop 不可數迴圈
+		console.log("不可數迴圈_1-10之間的數字");
+		var j = 1;
+		while(j<=10){ //條件符合時,繼續迴圈
+			console.log(j); //顯示j值
+			j++;
+		}
+		console.log("不可數迴圈_1-10之間的偶數");
+		var j = 2;
+		while (j<=10) { //條件符合時,繼續迴圈
+			console.log(j); //顯示j值
+			j+=2;
+		}
+		console.log("不可數迴圈_1-10之間的奇數");
+		var j = 1;
+		while (j<=10) { //條件符合時,繼續迴圈
+			console.log(j); //顯示j值
+			j+=2;
+		}
+	//陣列的使用
+	var myArr1 = new Array("111","222");
+	alert("myArr1的陣列大小為："+myArr1.length);
+	myArr1.push("abc");//第三個元素
+	alert("myArr1的陣列大小為："+myArr1.length);
+	myArr1.push("def");
+	alert("myArr1的陣列內容："+myArr1);//顯示所有在MyArr1的元素
+	alert("myArr2的第二筆資料："+myArr1[1]);
+	var myArr2 = ["111","222","333"];
+	alert("myArr2的陣列大小為："+myArr2.length);
+	alert("myArr2的陣列內容："+myArr2);
+	</script>
+</head>
+
+<body>
+	<h1><center>Java Script練習</center></h1>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+  <style>
+		.style {
+			font-size: 24px;
+		}
+		.style2 {
+			font-size: 72px;
+		}
+  </style>
+	<script>
+		window.onload = function () {//網頁開啟時事件
+			alert("網頁載入完成！！");
+			var obj = document.getElementById("p1");
+			obj.innerHTML = "aaaaaaaaaaa";
+			obj.style.color = "#F00";
+			obj.className = "style1";
+		}
+		function myClick1() { //當按鈕被按下時的Event處理
+			alert("測試按鈕按下成功");
+			var obj = document.getElementById("pic1");//取得pic1圖形物件
+			obj.src = "icon57x57.png";
+			//更動p1的文字格式
+			obj = document.getElementById("p1");//取得p1的文字區段
+			obj.className = "style2";
+		}
+		function mouseIn() { //當滑鼠滑入時的對應事件
+				console.log("有滑鼠滑入了！！！......");
+		}
+	</script>
+</head>
+
+<body>
+	<h1><center>Java Script練習_DOM範例</center></h1>
+    <p>
+      <input type="button" name="button" id="button1" value="請按我" onclick="alert('按鈕：我被按了！！！');">
+			<input type="button" name="button" id="button2" value="測試" onclick="myClick1();">
+    </p>
+		<p>
+			<img src="logo.png" width="170" height="200" id="pic1" onMouseOver="mouseIn();"/>
+		</p>
+		<p id="p1">
+			1234
+		</p>
+</body>
+</html>

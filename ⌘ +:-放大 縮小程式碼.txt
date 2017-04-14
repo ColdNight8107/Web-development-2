@@ -1,0 +1,3 @@
+commad + 放大
+
+commad - 縮小
