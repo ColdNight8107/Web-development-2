@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+	<script>
+		//物件導向開始的範例
+		var dice0 = {
+			x: 100,
+			y: 100,
+			num: 3,
+			showNum: function(){
+				alert("dice0的點數num="+this.num); //這個this等同dice0
+			}
+		}
+		dice0.x = 200;
+		dice0.num = 1;
+		dice0.showNum(); //這時候才是直接由dice0的物件執行方法的動作
+		
+		function playDice() {
+			//alert("開始擲骰子！！！"); //這是廢話啊
+			var n = Math.random();
+			n = Math.floor(n * 6) + 1;//轉換成為骰子的點數
+			console.log("點數："+n);	
+		}
+	</script>
+    <style>
+		div{
+			float:left;
+			width:200px;
+			height:200px;
+			font-size:60px;
+			border:solid 2px #000000;
+			background-color:#6CF;
+		}
+    </style>
+</head>
+<body>
+	<h1><center>Java Script練習_物件導向與外叫js</center></h1>
+    <input type= "button" value= "Play" onClick="playDice();" />
+    <div id = "d1">
+    	1
+    </div>
+    <div id= "d2">
+    	2
+    </div>
+</body>
+</html>

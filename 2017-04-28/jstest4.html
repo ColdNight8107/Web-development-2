@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+	<script>
+		var tID;
+		var count = 0;
+		tID = setInterval(myFunc1,1000);//啟動並設定定時器tID
+		function myFunc1() {
+			console.log("經過：" + count + "秒");
+			count++;
+			if(count>=10){
+				clearInterval(tID);//關閉定時器
+			}
+		}
+		setInterval(showTime,1000);//啟動時鐘的定時器
+		function showTime() {
+			var obj = document.getElementById("timeStr");
+			var now = new Date();//取得現在時間
+			obj.innerHTML = now.getMinutes() + ":" + now.getSeconds();
+		}
+		var tID2;
+		var x = 0;//pic1在x軸的位置
+		function movePic() {
+			var obj = document.getElementById("pic1");
+			obj.style.left = x + "px";
+			x = x + 10;//每次移動10px
+			if(x > 500){
+				clearInterval(tID2);//停止移動
+			}
+		}
+		function startMove() {
+			tID2 = setInterval(movePic, 50);//啟動定時器並開始移動pic1
+		}
+	</script>
+	<style>
+		#pic1{
+			position: absolute;
+			left: 16px;
+			top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h1><center>Java Script練習_動畫與時間</center></h1>
+    <p id="timeStr">
+    	00:00
+    </p>
+    <p>
+    	<img src="logo.png" width="170" height="200" id="pic1" onMouseOver="startMove();"/>
+    </p>
+</body>
+</html>
