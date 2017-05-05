@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+    <script src="jquery-1.11.0.js"></script>
+    <script src="myDice.js"></script>
+	<script>
+/*	//物件導向的開始範例
+	var dice0 = {//物件的宣告
+		x: 100, //物件屬性x,y,num
+		y: 100,
+		num: 3,
+		showNum: function(){
+			alert("dice0的點數num="+this.num);
+		}
+	}
+	dice0.x = 200;
+	dice0.num = 1;
+	dice0.showNum();//由dice0的物件執行方法
+	*/
+	var dice1 = new Dice();
+	var dice2 = new Dice();
+	dice1.num = 1;
+	//dice1.showNum();
+	dice2.num = 2;
+	//dice2.showNum();
+		function playDice(){ //按下[play]時的動作
+			//alert("開始擲骰子!!!");
+			/*var n = Math.random();
+			n = Math.floor(n * 6) + 1;//轉換成為骰子的點數
+			console.log("點數:"+n);*/
+			dice1.play();//由骰子擲出點數
+			dice2.play();
+			console.log("Dice="+dice1.num);
+			console.log("Dice2="+dice2.num);
+			var obj;
+			obj = document.getElementById("d1");
+			obj.innerHTML = dice1.num;
+			obj = document.getElementById("d2");
+			obj.innerHTML = dice2.num;
+
+			/*obj "= $("#d1");
+			alert("使用JQuery,Dice1="+obj.text());
+			obj.css("color","#F00");*/
+			
+			$("#d1").toggle(1500);//替換的意思
+			$("#d2").toggle(1500);
+		}
+		function divFadeOut(){
+			$("#d1").slideUp(1000);
+		}
+	</script>
+    <style>
+		div{
+			float:left;
+			width:200px;
+			height:200px;
+			font-size:60px;
+			border:solid 2px #000000;
+			background-color:#6CF;
+		}
+    </style>
+</head>
+<body>
+	<h1><center>Java Script練習_物件導向與外叫js</center></h1>
+    <input type= "button" value= "Play" onClick="playDice();" />
+    <div id = "d1" onmouseover="divFadeOut();">
+    	1
+    </div>
+    <div id= "d2">
+    	2
+    </div>
+</body>
+</html>

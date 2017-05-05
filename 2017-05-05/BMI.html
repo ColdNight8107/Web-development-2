@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script練習</title>
+	<script src="jquery-1.11.0.js"></script>
+	<script>
+		function getBMI(){
+			var h = $("#height").val();//取得身高= getElementById("height")
+			var w = $("#weight").val();//取得體重
+			//alert("目前的身高:"+h + "\n體重:"+w);
+			h = parseFloat(h)/100; //設為浮點數 
+			w = parseFloat(w);
+			//計算BMI＆顯示
+			var bmi = w/(h*h);
+			//alert("BMI="+bmi);
+			$("#bmiStr").text("BMI:"+bmi);
+			//健康建議=>圖形 18.5<BMI<24
+			var img = $("#imgBody");
+			if(bmi<=18.5){ //太瘦
+				img.css("width","50px");
+			}
+			else if(bmi>=24){ //太胖
+				img.css("width","150px");
+			}
+			else{ //嘟嘟好
+				img.css("width","100px");
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<h1><center>Java Script+JQuery練習_BMI的計算與建議</center></h1>
+	<p>身高：<input type="text" id="height" size="6">公分</p>
+	<p>體重：<input type="text" id="weight" size="6">公斤</p>
+	<p><input type="button" value="計算BMI" onclick="getBMI();"></p>
+	<p id="bmiStr">BMI:</p>
+	<img src="body.jpg" width="100" height="265" alt="" id="imgBody">
+</body>
+</html>
