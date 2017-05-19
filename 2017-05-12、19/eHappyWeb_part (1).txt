@@ -1,0 +1,44 @@
+<style>
+.logo {
+	width: 200px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.bookcover {
+	width: 210px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	box-shadow: 2px 2px 2px 2px #999;
+	border: 5px solid #FFF;	
+	border-radius: 10px;
+}
+#details #bookname {
+	font-size: 13px;
+	font-style: normal;
+	font-weight: bold;
+	color: #03C;
+	text-align: center;
+}
+</style>
+
+<script language="Javascript">
+
+    var index=0;           // 目前書籍的索引
+	var curImgSrc,curBook; // 目前取得的書籍圖檔名、書籍名稱 
+	// 書籍圖片
+	var aryBookSrc = new Array("ACL035131.jpg",
+	                           "ACA017300.jpg",
+				   "ACV026500.jpg",
+	                           "CU062100-01-1.jpg",
+					           "ACV025800.jpg");       
+	// 書名
+	var aryBookName = new Array("Android初學特訓班(第二版)",
+			"Mac完全上手一本通--OS X Lion",
+			"網路拍賣王 - 開店當老闆搶億萬商機",
+			"快快樂樂學會聲會影X5",
+			"Keynote(Mac x iPad x iPhone)全面啟動");       
+</script>
